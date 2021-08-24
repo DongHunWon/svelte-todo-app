@@ -1,24 +1,23 @@
 <script>
-	import { loadData, saveData } from './DataController.js';
-
-	let listData = loadData();
+	import { saveData } from './components/DataController.js';
+	import { listData } from './components/stores.js';
 
 	const addListHandler = (event) => {
 		if (event.key === 'Enter') {
 			const text = event.target.value;
 			if (!text) return;
 
-			listData = listData.concat({done: false, text: text});
+			$listData = [...$listData, {done: false, text: text}];
 			event.target.value = '';
 		}
 	}
 
 	const removeListHandler = () => {
-		listData = listData.filter(l => !l.done);
+		$listData = $listData.filter(l => !l.done);
 	}
 
 	// listData 값이 변경될 때마다 데이터 저장
-	$: saveData(listData);
+	$: saveData($listData);
 </script>
 
 <main class="wrap">
@@ -32,10 +31,10 @@
 			<button class="btn" on:click={removeListHandler}>제거</button>
 		</nav>
 		<ul>
-			{#each listData as list}
-				<li>
+			{#each $listData as list}
+				<li class="list">
 					<input type="checkbox" bind:checked={list.done}>
-					<input class="listText" bind:value={list.text} readonly>
+					{list.text}
 				</li>
 			{/each}
 		</ul>
@@ -84,11 +83,11 @@
         height: 1.5rem;
     }
 	
-	.listText {
-        margin-top: 0.5rem;
-        padding: 0.5rem 1rem;
-        width: 30%;
-        border: 1px;
-        border-radius: 0.5rem;
+	.list {
+		background-color: white;
+		width: 10rem;
+		height: 2rem;
+        margin-top: 1rem;
+        border-radius: 8px;
     }
 </style>
