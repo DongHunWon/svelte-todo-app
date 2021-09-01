@@ -45,5 +45,6 @@
 		display: flex;
 		width: 100%;
 		height: 70%;
+		justify-content: center;
 	}
 </style>
