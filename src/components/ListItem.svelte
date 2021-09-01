@@ -2,19 +2,21 @@
     export let state;
     export let text;
     export let checked;
-    export let onChange;
+    export let idx;
+    export let checkedChange;
+    export let stateChange
 </script>
 
 <div class="wrap">
     {#if state !== 'todo'}
-        <button class="btn">&lt;</button>
+        <button class="btn" on:click={() => stateChange(idx, 0)}>&lt;</button>
     {/if}
     <label>
-        <input type="checkbox" checked={checked} on:click={onChange}>
+        <input type="checkbox" checked={checked} on:click={() => checkedChange(idx)}>
         {text}
     </label>
     {#if state !== 'done'}
-        <button class="btn">&gt;</button>
+        <button class="btn" on:click={() => stateChange(idx, 1)}>&gt;</button>
     {/if}
 </div>
 
