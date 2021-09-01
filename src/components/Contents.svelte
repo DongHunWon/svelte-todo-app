@@ -2,12 +2,15 @@
     import { listData } from './stores.js';
     import ListItem from "./ListItem.svelte";
 
-    export let name;
+    export let state;
+    const checkedChange = (idx) => {
+        $listData[state][idx].checked = !$listData[state][idx].checked;
+    }
 </script>
 
 <article>
-    {#each $listData[name] as d, i (i) }
-        <ListItem {...d} />
+    {#each $listData[state] as d, i }
+        <ListItem {state} {...d} onChange={() => checkedChange(i)}/>
     {/each}
 </article>
 
