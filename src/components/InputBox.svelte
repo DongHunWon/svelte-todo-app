@@ -5,24 +5,23 @@
 		if (event.key === 'Enter') {
 			const text = event.target.value;
 			if (!text) return;
-
-			$listData.todo = [...$listData.todo, {state: 'todo', checked: false, text: text}];
+			$listData.todo = [...$listData.todo, {checked: false, text: text}];
 			event.target.value = '';
 		}
 	}
 
 	const removeListHandler = () => {
         for (let state in $listData) {
-            $listData[state] = $listData[state].filter(l => !l.done);
+            $listData[state] = $listData[state].filter(l => !l.checked);
         }
 	}
 </script>
 
 <section>
     <input class='textInput' type='text' on:keydown={addListHandler}/>
-    <nav>
+    <div>
         <button class="btn" on:click={removeListHandler}>제거</button>
-    </nav>
+    </div>
 </section>
 
 <style>
@@ -35,7 +34,7 @@
         border-radius: 0.5rem;
     }
 
-	nav {
+	div {
         margin: 1rem 0;
         color: #ffffff;
         text-align: center;

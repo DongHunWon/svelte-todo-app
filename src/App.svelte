@@ -16,9 +16,9 @@
 	<InputBox />
 
 	<section class="content">
-		<Contents name='todo' />
-		<Contents name='doing' />
-		<Contents name='done' />
+		<Contents state='todo' />
+		<Contents state='doing' />
+		<Contents state='done' />
 	</section>
 </main>
 
