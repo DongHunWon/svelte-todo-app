@@ -4,5 +4,5 @@ export const saveData = (data) => {
 
 export const loadData = () => {
     const data = localStorage.getItem('data');
-    return data ? JSON.parse(data) : [];
+    return data ? JSON.parse(data) : {todo: [], doing: [], done: []};
 }
