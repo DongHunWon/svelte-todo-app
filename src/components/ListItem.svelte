@@ -43,5 +43,7 @@
         padding: 1rem;
         margin: 0 0.5rem;
         border-radius: 8px;
+        word-break: break-all;
+        line-height: 1.4;
     }
 </style>

@@ -24,7 +24,8 @@
 
 <style>
 	.wrap {
-		width: 50%;
+		width: 60%;
+		height: 70vh;
 		background-color: #a0e48f;
 		border-radius: 1rem;
 		margin: 3rem auto;
@@ -32,7 +33,6 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		justify-content: center;
 	}
 
 	.title {
@@ -44,5 +44,6 @@
 	.content {
 		display: flex;
 		width: 100%;
+		height: 70%;
 	}
 </style>

@@ -18,26 +18,33 @@
 </script>
 
 <section>
-    <input class='textInput' type='text' on:keydown={addListHandler}/>
+    <input class='inputBox' type='text' on:keydown={addListHandler}/>
     <div>
         <button class="btn" on:click={removeListHandler}>제거</button>
     </div>
 </section>
 
 <style>
-    .textInput {
+    section {
+        width: 100%;
+        display: inline-block;
+        text-align: center;
+        margin: 0.5rem;
+    }
+
+    .inputBox {
         margin-top: 2rem;
         padding: 0.5rem 1rem;
-        width: 20rem;
+        width: 70%;
         height: 2rem;
         border: 1px;
         border-radius: 0.5rem;
+        text-align: center;
     }
 
 	div {
         margin: 1rem 0;
         color: #ffffff;
-        text-align: center;
     }
 
 	.btn {

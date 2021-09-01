@@ -23,7 +23,7 @@
 
 <article>
     <div class="title">{state}</div>
-    <div>
+    <div class="content">
         {#each $listData[state] as d, idx }
             <ListItem {state} {...d} {idx} {checkedChange} {stateChange}/>
         {/each}
@@ -32,13 +32,20 @@
 
 <style>
     article {
-        margin: 0 20px;
-        background-color: white;
-        height: 300px;
+        margin: 0 1rem;
         width: 30%;
     }
     
     .title {
         text-align: center;
+        color: white;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .content {
+        background-color: white;
+        height: 90%;
+        overflow-y: auto;
     }
 </style>
