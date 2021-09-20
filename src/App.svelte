@@ -30,7 +30,6 @@
 	.wrap {
 		width: 60%;
 		height: 70vh;
-		background-color: #a0e48f;
 		border-radius: 1rem;
 		margin: 3rem auto;
 		padding: 2rem;

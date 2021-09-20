@@ -44,7 +44,7 @@
     .title {
         text-align: center;
         color: white;
-        font-size: 1.5rem;
+        font-size: 2rem;
         margin-bottom: 1rem;
     }
 
