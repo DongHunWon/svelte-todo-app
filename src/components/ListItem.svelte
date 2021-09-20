@@ -8,6 +8,8 @@
 </script>
 
 <div class="wrap">
+    <!-- 목록을 왼쪽으로 보내기 위한 버튼 -->
+    <!-- doing -> todo -->
     {#if state !== 'todo'}
         <button class="btn" on:click={() => stateChange(idx, 0)}>&lt;</button>
     {/if}
@@ -15,6 +17,8 @@
         <input type="checkbox" checked={checked} on:click={() => checkedChange(idx)}>
         {text}
     </label>
+    <!-- 목록을 오른쪽으로 보내기 위한 버튼 -->
+    <!-- todo -> doing -->
     {#if state !== 'done'}
         <button class="btn" on:click={() => stateChange(idx, 1)}>&gt;</button>
     {/if}

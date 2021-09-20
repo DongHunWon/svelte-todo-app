@@ -1,6 +1,7 @@
 <script>
 	import { listData } from './stores.js';
 
+    // Enter 키를 눌렀을 때 todo 추가
     const addListHandler = (event) => {
 		if (event.key === 'Enter') {
 			const text = event.target.value;
@@ -10,6 +11,7 @@
 		}
 	}
 
+    // 선택된 목록 삭제
 	const removeListHandler = () => {
         for (let state in $listData) {
             $listData[state] = $listData[state].filter(l => !l.checked);

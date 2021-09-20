@@ -2,17 +2,22 @@
     import { listData } from './stores.js';
     import ListItem from "./ListItem.svelte";
 
+    // state = todo, doing, done
     export let state;
+    
+    // 목록을 바꾸기 위한 data
     const moveState = {
         'todo': ['', 'doing'],
         'doing': ['todo', 'done'],
         'done': ['doing', '']
     };
 
+    // 목록 선택
     const checkedChange = (idx) => {
         $listData[state][idx].checked = !$listData[state][idx].checked;
     };
     
+    // 목록 변경
     const stateChange = (idx, targetIdx) => {
         const nextState = moveState[state][targetIdx];
         const moveData = $listData[state].splice(idx, 1);

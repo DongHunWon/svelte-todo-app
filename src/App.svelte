@@ -4,8 +4,12 @@
 	import InputBox from './components/InputBox.svelte';
 	import Contents from './components/Contents.svelte';
 
+	// listData = {"todo":[{"checked":false,"text":""}],"doing":[],"done":[]}
 	// listData 값이 변경될 때마다 데이터 저장
 	$: saveData($listData);
+
+
+
 </script>
 
 <main class="wrap">
