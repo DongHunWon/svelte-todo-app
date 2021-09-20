@@ -24,14 +24,14 @@
     .wrap {
         display: flex;
         align-items: center;
-        margin: 0.5rem;
+        margin: 1rem;
     }
 
     .btn {
         width: 2rem;
         height: 1rem;
         color: #ffffff;
-        background-color: #368342;
+        background-color: rgb(77, 189, 94);
         border-radius: 0.3rem;
         height: 1.5rem;
     }
@@ -45,5 +45,6 @@
         border-radius: 8px;
         word-break: break-all;
         line-height: 1.4;
+        box-shadow: 1px 1px 5px gray;
     }
 </style>

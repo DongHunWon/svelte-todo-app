@@ -40,6 +40,8 @@
         border: 1px;
         border-radius: 0.5rem;
         text-align: center;
+        font-size: 1.5rem;
+        box-shadow: 3px 3px 5px gray;
     }
 
 	div {
@@ -53,5 +55,6 @@
         border-radius: 0.3rem;
         width: 4rem;
         height: 1.5rem;
+        box-shadow: 1px 1px 5px gray;
     }
 </style>

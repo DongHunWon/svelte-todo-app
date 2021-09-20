@@ -47,5 +47,17 @@
         background-color: white;
         height: 90%;
         overflow-y: auto;
+        border-radius: 1rem;
+        box-shadow: 2px 2px 5px gray;
+    }
+    
+    .content::-webkit-scrollbar {
+        background-color:rgba(230, 230, 230, 0.603);
+        border-radius: 0.5rem;
+    }
+
+    .content::-webkit-scrollbar-thumb {
+        background-color: rgb(179, 179, 179);
+        border-radius: 0.5rem;
     }
 </style>
