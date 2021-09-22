@@ -29,7 +29,7 @@
 <style>
 	.wrap {
 		width: 60%;
-		height: 70vh;
+		height: 45rem;
 		border-radius: 1rem;
 		margin: 3rem auto;
 		padding: 2rem;
